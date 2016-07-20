@@ -34,8 +34,13 @@ colorscheme molokai
 set t_Co=256
 set number
 set autoindent
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set display=lastline
 set backspace=indent,eol,start
-nnoremap <silent><C-n> :NERDTreeToggle<CR>
+
+if has('persistent_undo')
+	set undodir=~/.vim/undo
+	set undofile                                                                                                                                   
+endif
